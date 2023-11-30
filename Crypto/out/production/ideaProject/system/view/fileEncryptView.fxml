@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="760.0" prefWidth="1181.0" style="-fx-background-color: #030307; -fx-background-radius: 25 25 25 25;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system.controller.FileEncryptViewController">
+   <children>
+      <VBox layoutY="3.0" prefHeight="754.0" prefWidth="107.0" style="-fx-background-color: #131022; -fx-background-radius: 25 0 0 25;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="3.0">
+         <children>
+            <Pane prefHeight="68.0" prefWidth="96.0" style="-fx-background-radius: 15 0 15 15;" />
+            <Button fx:id="menu_main" contentDisplay="TOP" mnemonicParsing="false" onAction="#toMainView" prefHeight="80.0" prefWidth="120.0" styleClass="button3" stylesheets="@adminMainView.css" text="基础加密" textFill="#a868a0">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/cat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" style="-fx-background-color: #2F2B43;" stylesheets="@adminMainView.css" text="文件加密" textFill="#a868a0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/file.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="bt_enClient" contentDisplay="TOP" layoutX="10.0" layoutY="142.0" mnemonicParsing="false" onAction="#bt_enClientEvent" prefHeight="80.0" prefWidth="120.0" styleClass="button3" stylesheets="@adminMainView.css" text="双机客户" textFill="#a868a0">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/group.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="menu_double1" contentDisplay="TOP" mnemonicParsing="false" onAction="#bt_deServerEvent" prefHeight="80.0" prefWidth="120.0" styleClass="button3" stylesheets="@adminMainView.css" text="双机服务" textFill="#a868a0">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/服务器.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" styleClass="button3" stylesheets="@adminMainView.css" text="历史记录" textFill="#a868a0">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/time.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="10.0" layoutY="76.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" styleClass="button3" stylesheets="@adminMainView.css" text="统计信息" textFill="#a868a0">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/flag.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="150.0" layoutY="74.0" prefHeight="640.0" prefWidth="984.0" style="-fx-background-color: #131022; -fx-background-radius: 20;" stylesheets="@adminMainView.css">
+         <children>
+            <Pane layoutX="761.0" layoutY="45.0" prefHeight="56.0" prefWidth="190.0" style="-fx-background-radius: 10;" styleClass="linear-grad" stylesheets="@../../../../../../../NursingCenter/src/com/neusoft/view/adminMainView.css">
+               <children>
+                  <RadioButton fx:id="decryptBT" layoutX="24.0" layoutY="17.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="74.0" text="解密">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="encryptBT" layoutX="117.0" layoutY="17.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="69.0" selected="true" text="加密">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+               <effect>
+                  <Bloom threshold="0.71" />
+               </effect>
+            </Pane>
+            <Label layoutX="38.0" layoutY="42.0" prefHeight="42.0" prefWidth="163.0" text="文件加密" textFill="WHITE">
+               <font>
+                  <Font name="YouYuan" size="32.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" endY="63.19999694824219" layoutX="632.0" layoutY="-21.0" startX="100.0" startY="611.0" stroke="#b9b1b1" strokeDashOffset="2.0" />
+            <Button fx:id="deleteAccount" layoutX="779.0" layoutY="262.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" styleClass="button5" stylesheets="@adminMainView.css" text="清空内容" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="settings" layoutX="779.0" layoutY="199.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" styleClass="button6" stylesheets="@adminMainView.css" text="开始解密" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="bt_start2" layoutX="779.0" layoutY="136.0" mnemonicParsing="false" onAction="#bt_start2Event" prefHeight="30.0" prefWidth="142.0" styleClass="button4" stylesheets="@adminMainView.css" text="开始加密" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="algorithmComboBox" layoutX="461.0" layoutY="52.0" onAction="#algorithmEvent" prefHeight="35.0" prefWidth="227.0" promptText="请选择" styleClass="combo-box" stylesheets="@adminMainView.css" />
+            <TextArea fx:id="plaintext2" layoutX="34.0" layoutY="131.0" prefHeight="122.0" prefWidth="653.0" style="-fx-font-size: 18;" stylesheets="@adminMainView.css" />
+            <TextArea fx:id="key2" layoutX="34.0" layoutY="317.0" prefHeight="79.0" prefWidth="653.0" style="-fx-font-size: 18;" />
+            <TextArea fx:id="ciphertext2" layoutX="34.0" layoutY="461.0" prefHeight="122.0" prefWidth="653.0" style="-fx-font-size: 18;" />
+            <Label layoutX="34.0" layoutY="98.0" prefHeight="30.0" prefWidth="47.0" text="明文：" textFill="#7f7985">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="285.0" prefHeight="30.0" prefWidth="47.0" text="密钥：" textFill="#867979">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="430.0" prefHeight="30.0" prefWidth="47.0" text="密文：" textFill="#867979">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="pFile" fitHeight="29.0" fitWidth="29.0" layoutX="643.0" layoutY="172.0" onMouseClicked="#pFileEvent" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/文件类型-标准图-文件夹%20(2).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="633.0" layoutY="202.0" prefHeight="22.0" prefWidth="55.0" text="选择文件" textFill="#362240" />
+            <Line endX="100.0" endY="505.0" layoutX="528.0" layoutY="-366.0" startX="100.0" startY="611.0" stroke="#b9b1b1" strokeDashOffset="2.0" />
+            <Line endX="100.0" endY="505.0" layoutX="528.0" layoutY="-34.0" startX="100.0" startY="611.0" stroke="#b9b1b1" strokeDashOffset="2.0" />
+            <Line endX="100.0" endY="553.0" layoutX="527.0" layoutY="-229.0" startX="100.0" startY="619.0" stroke="#b9b1b1" strokeDashOffset="2.0" />
+            <ImageView fx:id="kFile" fitHeight="29.0" fitWidth="29.0" layoutX="642.0" layoutY="336.0" onMouseClicked="#kFileEvent" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/文件类型-标准图-文件夹%20(2).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="635.0" layoutY="535.0" prefHeight="22.0" prefWidth="55.0" text="选择文件" textFill="#362240" />
+            <ImageView fx:id="cFile" fitHeight="29.0" fitWidth="29.0" layoutX="643.0" layoutY="505.0" onMouseClicked="#cFileEvent" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/文件类型-标准图-文件夹%20(2).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="633.0" layoutY="365.0" prefHeight="22.0" prefWidth="55.0" text="选择文件" textFill="#362240" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="154.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+         <effect>
+            <Bloom threshold="0.0" />
+         </effect>
+      </ImageView>
+      <Label layoutX="203.0" layoutY="26.0" prefHeight="29.0" prefWidth="129.0" text="Crypto 密客" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+         <effect>
+            <Bloom threshold="0.0" />
+         </effect>
+      </Label>
+      <Label layoutX="551.0" layoutY="724.0" opacity="0.57" prefHeight="22.0" prefWidth="123.0" text="copyright@Deng-Yimo" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="exitButton" layoutX="1142.0" layoutY="15.0" onMouseClicked="#close" prefHeight="22.0" prefWidth="17.0" text="X" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

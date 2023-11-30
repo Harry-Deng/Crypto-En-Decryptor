@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ideaProject">
+    <output-path>$PROJECT_DIR$/out</output-path>
+    <root id="archive" name="ideaProject.jar">
+      <element id="archive" name="ideaProject.jar">
+        <element id="module-output" name="ideaProject" />
+      </element>
+      <element id="library" level="project" name="fontawesomefx-8.9" />
+      <element id="library" level="project" name="fontawesomefx-fontawesome-4.7.0-9.1.2" />
+      <element id="library" level="project" name="ikonli-fontawesome5-pack-2.4.0" />
+      <element id="library" level="project" name="jfoenix-1.0.0" />
+      <element id="library" level="project" name="xJavaFxTool-0.2.0" />
+    </root>
+  </artifact>
+</component>

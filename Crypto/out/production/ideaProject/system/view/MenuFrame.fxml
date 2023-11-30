@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="255.0" prefWidth="576.0" style="-fx-background-color: #030307; -fx-border-color: gray; -fx-border-width: 1px; -fx-border-radius: 10px; -fx-background-radius: 10px;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system.controller.MenuFrameController">
+   <children>
+      <Pane layoutX="65.0" layoutY="126.0" prefHeight="111.0" prefWidth="446.0" style="-fx-background-radius: 15 15 15 15; -fx-background-color: #131022;">
+         <children>
+            <JFXButton fx:id="bt_Single" buttonType="RAISED" layoutX="73.0" layoutY="21.0" onAction="#bt_SingleEvent" prefHeight="50.0" prefWidth="300.0" ripplerFill="#ba80e8" styleClass="linear-grad" stylesheets="@adminMainView.css" text="开始使用" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <VBox layoutX="14.0" layoutY="158.0" prefHeight="29.0" prefWidth="34.0" spacing="45.0" />
+            <Label layoutX="172.0" layoutY="79.0" prefHeight="29.0" prefWidth="103.0" text="用户协议及注意事项" textFill="#9e9e9e" underline="true">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="29.0" fitWidth="28.0" layoutX="12.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+         <effect>
+            <Bloom threshold="0.0" />
+         </effect>
+      </ImageView>
+      <Label layoutX="49.0" layoutY="11.0" prefHeight="29.0" prefWidth="95.0" text="Crypto 密客" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <Bloom threshold="0.0" />
+         </effect>
+      </Label>
+      <Label layoutX="147.0" layoutY="62.0" prefHeight="39.0" prefWidth="282.0" text="轻量化快速加密工具" textFill="#fcfcfc">
+         <font>
+            <Font name="System Italic" size="30.0" />
+         </font>
+         <effect>
+            <Bloom threshold="0.0" />
+         </effect>
+      </Label>
+      <Label fx:id="exitButton" layoutX="543.0" layoutY="12.0" onMouseClicked="#close" onMouseEntered="#exitBtnToRed" onMouseExited="#exitBtnToPurple" prefHeight="29.0" prefWidth="17.0" text="X" textFill="#e2deff">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

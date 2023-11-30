@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="425.0" prefWidth="880.0" styleClass="background" stylesheets="@newStaff.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system.controller.DHFrameController">
+   <children>
+      <VBox layoutY="51.0" prefHeight="372.0" prefWidth="880.0">
+         <children>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Separator>
+            <HBox prefHeight="352.0" prefWidth="880.0">
+               <children>
+                  <VBox prefHeight="434.0" prefWidth="560.0" spacing="20.0">
+                     <children>
+                        <VBox prefHeight="323.0" prefWidth="386.0" spacing="20.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="              甲方公钥    ">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="8.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <TextArea fx:id="publicKey1" prefHeight="38.0" prefWidth="260.0" stylesheets="@adminMainView.css" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="           甲方私钥    ">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="8.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                          <TextArea fx:id="privateKey1" prefHeight="38.0" prefWidth="260.0" stylesheets="@adminMainView.css" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="38.0" prefWidth="374.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="甲方本地密钥   ">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="8.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <TextArea fx:id="localKey1" prefHeight="37.0" prefWidth="260.0" stylesheets="@adminMainView.css" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="    甲向乙发送数据   ">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="8.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <TextArea fx:id="send1" prefHeight="36.0" prefWidth="260.0" stylesheets="@adminMainView.css" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="    经甲方密钥加密   ">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="8.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <TextArea fx:id="ciphertext1" prefHeight="36.0" prefWidth="175.0" stylesheets="@adminMainView.css" />
+                                    <Button fx:id="bt_encrypt1" mnemonicParsing="false" onAction="#bt_encrypt1Event" prefHeight="25.0" prefWidth="68.0" styleClass="button4" stylesheets="@adminMainView.css" text="加密">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="6.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="    经乙方密钥解密   ">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="8.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <TextArea fx:id="plaintext1" prefHeight="36.0" prefWidth="175.0" stylesheets="@adminMainView.css" />
+                                    <Button fx:id="bt_decrypt1" mnemonicParsing="false" onAction="#bt_decrypt1Event" prefHeight="23.0" prefWidth="68.0" styleClass="button6" stylesheets="@adminMainView.css" text="解密">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="6.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="434.0" prefWidth="520.0" spacing="20.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="             乙方公钥   ">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="8.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextArea fx:id="publicKey2" prefHeight="38.0" prefWidth="260.0" stylesheets="@adminMainView.css" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="38.0" prefWidth="409.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="          乙方私钥   ">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="8.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextArea fx:id="privateKey2" prefHeight="38.0" prefWidth="260.0" stylesheets="@adminMainView.css" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="      乙方本地密钥   ">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="8.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextArea fx:id="localKey2" prefHeight="36.0" prefWidth="260.0" stylesheets="@adminMainView.css" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  乙向甲发送数据   ">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="8.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextArea fx:id="send2" prefHeight="36.0" prefWidth="260.0" stylesheets="@adminMainView.css" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="36.0" prefWidth="434.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  经乙方密钥加密   ">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="8.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextArea fx:id="ciphertext2" prefHeight="36.0" prefWidth="179.0" stylesheets="@adminMainView.css" />
+                              <Button fx:id="bt_encrypt2" mnemonicParsing="false" onAction="#bt_encrypt2Event" prefHeight="23.0" prefWidth="66.0" styleClass="button4" stylesheets="@adminMainView.css" text="加密">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="6.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <ColorAdjust brightness="0.04" />
+                                 </effect>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  由甲方密钥解密   ">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="8.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextArea fx:id="plaintext2" prefHeight="36.0" prefWidth="180.0" stylesheets="@adminMainView.css" />
+                              <Button fx:id="bt_decrypt2" mnemonicParsing="false" onAction="#bt_decrypt2Event" prefHeight="23.0" prefWidth="65.0" stylesheets="@adminMainView.css" text="解密">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="6.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="button4" />
+                                    <String fx:value="button6" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="319.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DH密钥交换过程实现">
+         <font>
+            <Font name="YouYuan" size="27.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Text>
+      <Line endX="94.0" endY="407.0" layoutX="347.0" layoutY="-354.0" startX="94.0" startY="779.0" stroke="#b9b1b1" strokeDashOffset="2.0" />
+      <Label fx:id="exitButton" layoutX="849.0" layoutY="13.0" onMouseClicked="#close" prefHeight="30.0" prefWidth="14.0" text="X" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

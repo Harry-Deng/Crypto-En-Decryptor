@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="354.0" styleClass="background" stylesheets="@newStaff.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system.controller.CA_1dFrameController">
+   <children>
+      <Pane layoutY="-2.0" prefHeight="85.0" prefWidth="354.0" styleClass="linear-grad" stylesheets="@adminMainView.css">
+         <effect>
+            <Bloom threshold="0.71" />
+         </effect>
+         <children>
+            <Label fx:id="exitButton" layoutX="321.0" layoutY="14.0" onMouseClicked="#close" prefHeight="30.0" prefWidth="14.0" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox layoutX="-8.0" layoutY="72.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="275.0" prefWidth="360.0">
+               <children>
+                  <Separator opacity="0.15" prefHeight="35.0" prefWidth="314.0" />
+                  <VBox prefHeight="188.0" prefWidth="360.0" spacing="25.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="长  度：  " textAlignment="RIGHT" wrappingWidth="128.04022216796875">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField fx:id="length" prefHeight="16.0" prefWidth="162.0" styleClass="textView" stylesheets="@newStaff.css" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="初始化：  " textAlignment="RIGHT" wrappingWidth="129.04022216796875">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField fx:id="initialization" prefHeight="16.0" prefWidth="162.0" styleClass="textView" stylesheets="@newStaff.css" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="规  则：  " textAlignment="RIGHT" wrappingWidth="130.04022216796875">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField fx:id="rule" prefHeight="16.0" prefWidth="162.0" styleClass="textView" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="随机位：  " textAlignment="RIGHT" wrappingWidth="132.04022216796875">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField fx:id="random" prefHeight="16.0" prefWidth="162.0" styleClass="textView" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="明  文：  " textAlignment="RIGHT" wrappingWidth="131.04022216796875">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField fx:id="plaintext" prefHeight="16.0" prefWidth="162.0" styleClass="textView" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Separator opacity="0.15" prefHeight="35.0" prefWidth="314.0" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <JFXButton fx:id="okBT" buttonType="RAISED" layoutX="109.0" layoutY="354.0" onAction="#bt_okEvent" prefHeight="35.0" prefWidth="137.0" ripplerFill="#ff9d73" styleClass="saveBtn" stylesheets="@newStaff.css" text="确  定" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="74.0" layoutY="19.0" prefHeight="54.0" prefWidth="196.0" text="细胞自动机" textFill="WHITE">
+         <font>
+            <Font name="YouYuan" size="33.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

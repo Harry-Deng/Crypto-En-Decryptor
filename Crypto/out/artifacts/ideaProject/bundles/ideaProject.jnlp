@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ideaProject.jnlp">
+  <information>
+    <title>ideaProject</title>
+    <vendor>Unknown</vendor>
+    <description>ideaProject</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="fontawesomefx-fontawesome-4.7.0-9.1.2.jar" size="137226" download="eager" />
+    <jar href="ideaProject.jar" size="72552940" download="eager" />
+    <jar href="ikonli-fontawesome5-pack-2.4.0.jar" size="892962" download="eager" />
+    <jar href="jfoenix-1.0.0.jar" size="2186636" download="eager" />
+    <jar href="xJavaFxTool-0.2.0.jar" size="27659945" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="system.Main"  name="ideaProject" />
+  <update check="background"/>
+</jnlp>
