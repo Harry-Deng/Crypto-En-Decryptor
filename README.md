@@ -5,7 +5,8 @@
 
 >**这款应用提供了多样化的加密功能，包括基础和复杂的加密方法**。用户可以选择Caesar、Keyword、RC4、DES等密钥支持型密码，操作简单，只需在明文-密钥-密文三文本框模式中输入相应数据。除了基础加密，还包括一维CA、RSA和DH密钥交换等复杂加密方式，以及文件加密功能，支持将文件内容直接写入文本框进行加解密。另外，提供了双机加密功能，基于Windows的Socket实现多机间的密文和密钥通信。其GUI设计采用暗色调紫色为基色，界面风格和谐统一，注重用户交互体验，使得整体使用感更加友好。这款APP是一个综合性的加密工具，适合需要安全数据处理的用户。
 
-![image](https://github.com/Harry-Deng/Crypto-En-Decryptor/assets/72896380/67190dd7-5e68-4d06-8a9f-d2dd5a56b95c)
+
+![Crypto](https://github.com/Harry-Deng/Crypto-En-Decryptor/assets/72896380/933c061c-4b2f-4e32-ba37-c99f6ad0ceb1)
 
 
 Functions
